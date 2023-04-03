@@ -7,12 +7,13 @@
 // ------------------------------ //
     // Tout comme vous mettez le nom d'un carton en fonction de ce qui se trouvent à l'intérieur, de même, le nom d'une varibale doit indiquer ce qui se trouve à l'intérieur
 
+    // Comment déclarer une variable ? Avec let, const et var
     let car = "bmw"
 
-    car = "Seat"
+    car = "Seat" // => on peur réaffecter un valeur à une variable existante
 
     let quantityBookInStock = 500
-    // camelCase
+    // camelCase => 1ère lettre des mot en majuscule sauf la toute première
 
     // Exercice
         // Créer deux variables : 
@@ -20,26 +21,19 @@
             // "numberOfEpisodes" et assignez lui la valeur 12
 
             // Correction
-              let numberOfSeasons = 6;
+              let numberOfSeasons = 6
               let numberOfEpisodes = 12
-
-              console.log(numberOfSeasons)
 
     
 // --- Modifier la valeur d'une variable
-    quantityBookInStock = 499
+    quantityBookInStock = 499 // => on a changer la valeur
 
 // --- Les Opérateurs
     // +, -, *, /, %
 
-    let nombre = 10 + 3
-    console.log(nombre)
-
-    let nombre2 = 2
-    console.log(nombre + nombre2)
-
-    let chaine = "ma chaine"
-    console.log(chaine) // une concaténation
+    let nombre = 10 + 3 // addition, soustraction
+    let nombre2 = 6 / 2 // division
+    let nombre3 = 2 * 3 // multiplication
 
     // Exercice
         // Créer deux nouvelles variables
@@ -51,15 +45,14 @@
 
 
 // --- Mutabilité des variables
-    let compteur = 0;
+    let compteur = 0; 
     compteur++;
-    compteur = 10;
-
+    compteur = 10; // On peut changer la valeur si c'est déclarer avec let ou var. 
 
 
 // --- Les constantes
     const nombrePostParPage = 20;
-    // nombrePostParPage = 30; // Retournera une erreur dans la console car on ne peut plus changer sa valeur
+    nombrePostParPage = 30; // Retournera une erreur dans la console car on ne peut plus changer sa valeur
 
     // Exercice 
       // https://replit.com/team/DTBMI-javascript/Formation-JS-Exercice-1-les-variables
@@ -89,13 +82,7 @@
 // String
   let chaine1 = "Je m'appelle Flo"
   let chaine2 = "j'ai 25 ans"
-  console.log(chaine1 + ' ' + chaine2)
-
-  const myName = 'Flo'
-
-  // C , C++
-  // 0 ou 1 
-  // 001101011011 011 011001101 111000 111111001 => langage machine
+  console.log(chaine1 + ' ' + chaine2) // => concaténation
 
     // Exercice
       // https://replit.com/team/DTBMI-javascript/Formation-JS-Exercice-2-les-types
@@ -119,12 +106,12 @@
 
 
   // Comment créer un objet ?
-  // let myBook = {
-  //   title: 'Le titre du livre',
-  //   author: 'Mat VD',
-  //   numberOfPages: 250,
-  //   readed: true 
-  // }
+  let myBook = {
+    title: 'Le titre du livre',
+    author: 'Mat VD',
+    numberOfPages: 250,
+    readed: true 
+  }
 
   
 
@@ -134,14 +121,8 @@
 
   // Comment accéder aux données d'un objet ?
 
-    let myBook = {
-      title: 'Le titre du livre',
-      author: 'Mat VD',
-      numberOfPages: 250,
-      readed: true 
-    }
-
     console.log(myBook.title) // dot notation
+    console.log(myBook.author)
 
     // Exercice
       // https://replit.com/team/DTBMI-javascript/Formation-JS-Exercice-3-les-objets
@@ -153,8 +134,8 @@
   // Une classe est un modèle pour un objet dans le code. Elle permet de construire plusieurs objets du même type (appelés instances de la même classe) plus facilement, rapidement et en toute fiabilité
 
 // Comment construire une classe ?
-    class MyBook { 
-      constructor(title, author, numberOfPages, readed) {
+    class MyBook {  // mot clé "class" puis nom de la classe avec une majuscule
+      constructor(title, author, numberOfPages, readed) { 
         this.title = title;
         this.author = author;
         this.numberOfPages = numberOfPages;
@@ -163,7 +144,6 @@
     }
 
     let book1 = new MyBook('Le titre du livre', 'nom auteur', 200, true);
-    
     
     // Exerice
       // https://replit.com/team/DTBMI-javascript/Formation-JS-Exercice-4-les-classes
@@ -175,8 +155,9 @@
 // ----------- 04 Les tableaux ------------ //
 // ---------------------------------------- //
   // Il existe un autre type en JavaScript : le tableau (array).
+
     //                0         1        2        3     
-    let guests = ['Franck', 'Marvin', 'John', 'Isabelle'] // => Collection
+    let guests = ['Franck', 'Marvin', 'John', 'Isabelle']
 
   // Info : l'indice d'un tableau démarre à zéro
 
@@ -185,28 +166,18 @@
 
   
   // Travailler sur les tableaux
-
     // Length
-      console.log(guests.length)
-
+      guests.length
     // Push
-      console.log(guests)
       guests.push('Mat') // => ajoute un élément en fin de tableau
-      
     // Unshift
       guests.unshift('Greg') // => ajoute un élément en début de tableau
-      console.log(guests)
-
     // Pop
       guests.pop()
-      console.log(guests)
-
-      console.log(guests.includes('Flo'))
 
 
     // Exercice
 
-  
   // Résumé avec Kahoots
 
 
@@ -222,22 +193,22 @@
   // C'est ce qu'on appelle une instruction conditionnelle, parce qu'elle vérifie si certaines conditions sont réunies, et réagit en conséquence.
   let boolean3 = true;
 
-  // if (boolean3) {
-  //   alert('La condition est remplie')
-  // } else {
-  //   alert('La condition n\'est pas remplie')
-  // }
+  if (boolean3) {
+    alert('La condition est remplie')
+  } else {
+    alert('La condition n\'est pas remplie')
+  }
 
-  // let userLoggedIn = true
-  // let firstName = "Paul"
+  let userLoggedIn = true
+  let firstName = "Paul"
 
-  // // expressions de comparaisons
-  // // < , <= , == , >= , > , !=
-  // if (firstName != "Paul") {
-  //   alert("Utilisateur connecté")
-  // } else {
-  //   alert(`Bonjour ${firstName}`)
-  // }
+  // expressions de comparaisons
+  // < , <= , == , >= , > , !=
+  if (firstName != "Paul") {
+    alert("Utilisateur connecté")
+  } else {
+    alert(`Bonjour ${firstName}`)
+  }
 
     // Exercice 
       // https://replit.com/team/DTBMI-javascript/Formation-JS-Exercice-6-les-conditions
@@ -250,11 +221,11 @@
 
     let age = 18
 
-    // if (age >= 18) {
-    //   alert("Vous êtes autorisé à conduire")
-    // } else {
-    //   alert("Dommage, il va falloir attendre")
-    // }
+    if (age >= 18) {
+      alert("Vous êtes autorisé à conduire")
+    } else {
+      alert("Dommage, il va falloir attendre")
+    }
     
   // Les conditions multiples
 
