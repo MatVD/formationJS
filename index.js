@@ -7,14 +7,39 @@
 // ------------------------------ //
     // Tout comme vous mettez le nom d'un carton en fonction de ce qui se trouvent à l'intérieur, de même, le nom d'une varibale doit indiquer ce qui se trouve à l'intérieur
 
+    let car = "bmw"
+
+    car = "Seat"
+
+    let quantityBookInStock = 500
+    // camelCase
+
     // Exercice
         // Créer deux variables : 
             // "numberOfSeasons" et lui affecter la valeur 6
             // "numberOfEpisodes" et assignez lui la valeur 12
+
+            // Correction
+              let numberOfSeasons = 6;
+              let numberOfEpisodes = 12
+
+              console.log(numberOfSeasons)
+
     
 // --- Modifier la valeur d'une variable
+    quantityBookInStock = 499
 
 // --- Les Opérateurs
+    // +, -, *, /, %
+
+    let nombre = 10 + 3
+    console.log(nombre)
+
+    let nombre2 = 2
+    console.log(nombre + nombre2)
+
+    let chaine = "ma chaine"
+    console.log(chaine) // une concaténation
 
     // Exercice
         // Créer deux nouvelles variables
@@ -26,23 +51,18 @@
 
 
 // --- Mutabilité des variables
+    let compteur = 0;
+    compteur++;
+    compteur = 10;
+
 
 
 // --- Les constantes
+    const nombrePostParPage = 20;
+    // nombrePostParPage = 30; // Retournera une erreur dans la console car on ne peut plus changer sa valeur
 
     // Exercice 
       // https://replit.com/team/DTBMI-javascript/Formation-JS-Exercice-1-les-variables
-
-      // Voici un composant qui déconstruit une journée en heures, minutes et secondes.
-
-      // Créer les trois constantes qui donnent le nombre d'heures par jour, le nombre de minutes par heure, et le nombre de secondes par minute.
-    
-      // Jouez un peu avec ces valeurs, et vous verrez vite l'importance d'avoir les bonnes valeurs constantes dans une application !
-    
-      // Dans l'espace alloué, créez les trois constantes suivantes :
-        // hoursPerDay: heures par jour
-        // minutesPerHour: minutes par heure
-        // secondsPerMinute: secondes par minute
 
 
   // Résumé avec Kahoots
@@ -54,30 +74,31 @@
 
 // number (nombre) ;
 // string (chaîne de caractères) ;
-// boolean (valeur logique).
+// boolean (valeur logique). true ou false
 
 // Les types primitifs sont les briques de base de chaque structure de données en JavaScript. Peu importe la complexité finale de votre application, à sa base se trouveront ces trois types primitifs.
 
 // Number
+  let numberInt = 20
+  let numberFloat = 1.3
 
 // Boolean
+  let boolean = true
+  let boolean2 = false
 
 // String
+  let chaine1 = "Je m'appelle Flo"
+  let chaine2 = "j'ai 25 ans"
+  console.log(chaine1 + ' ' + chaine2)
+
+  const myName = 'Flo'
+
+  // C , C++
+  // 0 ou 1 
+  // 001101011011 011 011001101 111000 111111001 => langage machine
 
     // Exercice
       // https://replit.com/team/DTBMI-javascript/Formation-JS-Exercice-2-les-types
-
-      // Maintenant que vous avez terminé le composant pour la série, il est temps de travailler sur le composant pour les épisodes individuels.
-
-      // Ce composant affichera le titre de l'épisode, sa durée en minutes, et si l'utilisateur a déjà regardé l'épisode ou non.
-
-      // Créez une variable nommée  episodeTitle  qui contient une chaîne de caractères correspondant au titre de votre épisode (employez votre créativité !).
-
-      // Créez une variable appelée  episodeDuration  qui contient un nombre correspondant à la durée de votre épisode en minutes.
-
-      // Enfin, créez une variable booléenne nommée   hasBeenWatched  qui indique si l'utilisateur a déjà regardé l'épisode ou non.
-
-      // Vérifiez si le composant fonctionne correctement. N'hésitez pas à modifier vos valeurs pour vérifier que le composant réagit comme prévu. N'oubliez pas, votre code ira entre les commentaires "===" sur l'exercice.
 
   
     // Résumé avec Kahoots
@@ -98,41 +119,32 @@
 
 
   // Comment créer un objet ?
+  // let myBook = {
+  //   title: 'Le titre du livre',
+  //   author: 'Mat VD',
+  //   numberOfPages: 250,
+  //   readed: true 
+  // }
 
+  
 
     // Exercice
       // https://replit.com/team/DTBMI-javascript/Formation-JS-Exercice-3-les-objets
-
-      // Dans un exercice précédent, vous avez créé trois variables pour décrire l'épisode d'une série. On dirait la situation parfaite pour créer un seul objet  episode  : créons-le maintenant !
-      
-      // Créez un objet (Object, en anglais) et stockez-le dans une variable appelée   episode  . Utilisez bien des accolades  {}  et mettez les trois attributs suivants :
-      
-        // title  : le titre de l'épisode ;
-        // duration  : la durée de l'épisode ;
-        // hasBeenWatched  : si l'épisode a été visionné ou non.
-      
-      // Associez des valeurs appropriées à chaque attribut.
-      
-      // N'oubliez pas d'utiliser des paires clé-valeur séparées par des virgules. Votre code ira entre les commentaires "===" sur l'exercice.
-      
-      // Si vous n'y arrivez pas du premier coup, ne vous découragez pas, poursuivez vos efforts ! L'apprentissage de la programmation se fait en pratiquant et en apprenant de ses erreurs. 😎
 
 
   // Comment accéder aux données d'un objet ?
 
+    let myBook = {
+      title: 'Le titre du livre',
+      author: 'Mat VD',
+      numberOfPages: 250,
+      readed: true 
+    }
+
+    console.log(myBook.title) // dot notation
+
     // Exercice
       // https://replit.com/team/DTBMI-javascript/Formation-JS-Exercice-3-les-objets
-
-      // Voici une occasion de mettre en pratique la dot notation
-
-      // Dans l’exercice précédent, quand vous avez construit l'Object episode  , le code de votre collègue en a extrait les données pour les afficher dans son composant. Maintenant, c'est à vous d'extraire les informations pour les fournir au composant avec la notation  .  ou "dot".
-
-      // Créez les trois variables suivantes :
-        // episodeTitle  : le titre de l'épisode (string) ;
-        // episodeDuration  : la durée de l'épisode (number) ;
-        // episodeHasBeenWatched  : si l'épisode a été regardé ou non (boolean).
-
-      // Assignez-y les valeurs correspondantes de l'objet  episode  en utilisant la notation "dot".
 
 
 // Les classes 
@@ -141,27 +153,20 @@
   // Une classe est un modèle pour un objet dans le code. Elle permet de construire plusieurs objets du même type (appelés instances de la même classe) plus facilement, rapidement et en toute fiabilité
 
 // Comment construire une classe ?
+    class MyBook { 
+      constructor(title, author, numberOfPages, readed) {
+        this.title = title;
+        this.author = author;
+        this.numberOfPages = numberOfPages;
+        this.readed = readed;
+      }
+    }
 
+    let book1 = new MyBook('Le titre du livre', 'nom auteur', 200, true);
+    
+    
     // Exerice
       // https://replit.com/team/DTBMI-javascript/Formation-JS-Exercice-4-les-classes
-
-      // Maintenant que vous savez créer des classes, il est temps d'en profiter pour notre composant épisode. Cette fois-ci, il y a trois composants épisodes, donc la manière logique de procéder serait de créer une classe   Episode  , et puis en créer trois instances – une pour chaque épisode.
-
-      // Créez une classe  Episode  avec le mot clé  class  .
-      
-      // Créez un constructor pour votre classe  Episode  qui devra accepter trois arguments :
-        // title  : le titre de l'épisode (string) ;
-        // duration  : la durée de l'épisode (number) ;
-        // hasBeenWatched  : si l'épisode a été regardé ou non (boolean).
-      
-      // En utilisant le mot clé   this  , assignez les propriétés  title  ,  duration  et  hasBeenWatched  via un constructor .
-      
-      // Avec le mot clé   new  , créez trois instances de la classe  Episode  :
-        // firstEpisode  ;
-        // secondEpisode  ;
-        // thirdEpisode  .
-      
-      // N'oubliez pas de passer des arguments appropriés à chaque instance.
 
 
   // Résumé avec Kahoots
@@ -170,13 +175,112 @@
 // ----------- 04 Les tableaux ------------ //
 // ---------------------------------------- //
   // Il existe un autre type en JavaScript : le tableau (array).
+    //                0         1        2        3     
+    let guests = ['Franck', 'Marvin', 'John', 'Isabelle'] // => Collection
 
   // Info : l'indice d'un tableau démarre à zéro
 
     // Exercice
     // https://replit.com/team/DTBMI-javascript/Formation-JS-Exercice-5-les-tableaux
 
-// 05 - Les variables
+  
+  // Travailler sur les tableaux
+
+    // Length
+      console.log(guests.length)
+
+    // Push
+      console.log(guests)
+      guests.push('Mat') // => ajoute un élément en fin de tableau
+      
+    // Unshift
+      guests.unshift('Greg') // => ajoute un élément en début de tableau
+      console.log(guests)
+
+    // Pop
+      guests.pop()
+      console.log(guests)
+
+      console.log(guests.includes('Flo'))
+
+
+    // Exercice
+
+  
+  // Résumé avec Kahoots
+
+
+// ----------- 04 Les conditions ------------ //
+// ------------------------------------------ //
+
+  // L'instruction   if  /  else  est une des plus universelles en programmation. Qu'il s'agisse de réagir à une saisie de l'utilisateur, aux résultats de calculs ou de simplement vérifier si quelqu'un est connecté ou non, vous aurez souvent à utiliser des instructions if/else.
+
+  // IF (SI) l'utilisateur est connecté, ouvrir sa page d'accueil
+
+  // ELSE (SINON) revenir à la page de connexion
+
+  // C'est ce qu'on appelle une instruction conditionnelle, parce qu'elle vérifie si certaines conditions sont réunies, et réagit en conséquence.
+  let boolean3 = true;
+
+  // if (boolean3) {
+  //   alert('La condition est remplie')
+  // } else {
+  //   alert('La condition n\'est pas remplie')
+  // }
+
+  // let userLoggedIn = true
+  // let firstName = "Paul"
+
+  // // expressions de comparaisons
+  // // < , <= , == , >= , > , !=
+  // if (firstName != "Paul") {
+  //   alert("Utilisateur connecté")
+  // } else {
+  //   alert(`Bonjour ${firstName}`)
+  // }
+
+    // Exercice 
+      // https://replit.com/team/DTBMI-javascript/Formation-JS-Exercice-6-les-conditions
+
+    // La condition à remplir pour pouvoir conduire une voiture en france
+    // age >= 18
+    // haveAcar = true
+    // haveFuel = true
+    // Si la condition est remplie, aficher "Vous êtes autorisé à conduire" sinon afficher "Dommage, il va falloir attendre"
+
+    let age = 18
+
+    // if (age >= 18) {
+    //   alert("Vous êtes autorisé à conduire")
+    // } else {
+    //   alert("Dommage, il va falloir attendre")
+    // }
+    
+  // Les conditions multiples
+
+    // Opérateurs logiques
+    // ET => && 
+    // OU => ||
+    // ! => NOT
+
+  let haveAcar = true
+  let haveFuel = false
+  let haveKeys = true
+
+  if (age >= 18 && haveAcar && haveFuel && haveKeys) {
+    alert("Vous êtes autorisé à conduire")
+  } else {
+    alert("Dommage, il va falloir attendre")
+  }
+
+    // Exercice 
+      // https://replit.com/team/DTBMI-javascript/Formation-JS-Exercice-6-les-conditions
+
+  // Le scope des variables
+
+  // L'instruction switch
+
+  // Résumé kahoots
 
 // 06 - Les variables
 
