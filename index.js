@@ -181,7 +181,7 @@
   // Résumé avec Kahoots
 
 
-// ----------- 04 Les conditions ------------ //
+// ----------- 05 Les conditions ------------ //
 // ------------------------------------------ //
 
   // L'instruction   if  /  else  est une des plus universelles en programmation. Qu'il s'agisse de réagir à une saisie de l'utilisateur, aux résultats de calculs ou de simplement vérifier si quelqu'un est connecté ou non, vous aurez souvent à utiliser des instructions if/else.
@@ -247,11 +247,32 @@
     // Exercice 
       // https://replit.com/team/DTBMI-javascript/Formation-JS-Exercice-6-les-conditions
 
-  // Le scope des variables
+  // Le scope des variables (la portée des variables)
+    // En JavaScript, les variables créées par let  ou const  ne peuvent 
+    // être vues ou utilisées qu'à l'intérieur du bloc de code dans lequel elles sont déclarées.
+
+
 
   // L'instruction switch
 
   // Résumé kahoots
 
-// 06 - Les variables
+// ------------- 06 Les boucles ------------- //
+// ------------------------------------------ //
 
+// For
+
+// While
+
+
+// -------- 07 La gestion des erreurs ------- //
+// ------------------------------------------ //
+
+// En JavaScript, comme dans beaucoup d'autres langages de programmation, 
+// on distingue généralement trois types d'erreur.
+
+  // - les erreurs de syntaxe
+
+  // - les erreurs de logique
+
+  // - les erreurs d'éxécution
