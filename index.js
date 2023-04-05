@@ -457,3 +457,12 @@
 
     // Exercice
       // https://replit.com/team/DTBMI-javascript/Formation-JS-Exercice-8-les-fonctions
+
+
+// ------------ 09 Le Clean Code ------------ //
+// ------------------------------------------ //
+
+
+
+// ------------ 10 L'API DOM ------------ //
+// -------------------------------------- //
