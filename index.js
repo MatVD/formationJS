@@ -10,7 +10,7 @@
     // Comment déclarer une variable ? Avec let, const et var
     //let car = "bmw"
 
-    car = "Seat" // => on peur réaffecter un valeur à une variable existante
+    let car2 = "Seat" // => on peur réaffecter un valeur à une variable existante
 
     let quantityBookInStock = 500
     // camelCase => 1ère lettre des mot en majuscule sauf la toute première
@@ -134,16 +134,16 @@
   // Une classe est un modèle pour un objet dans le code. Elle permet de construire plusieurs objets du même type (appelés instances de la même classe) plus facilement, rapidement et en toute fiabilité
 
 // Comment construire une classe ?
-    class MyBook {  // mot clé "class" puis nom de la classe avec une majuscule
-      constructor(title, author, numberOfPages, readed) { 
-        this.title = title;
-        this.author = author;
-        this.numberOfPages = numberOfPages;
-        this.readed = readed;
-      }
-    }
+    // class MyBook {  // mot clé "class" puis nom de la classe avec une majuscule
+    //   constructor(title, author, numberOfPages, readed) { 
+    //     this.title = title;
+    //     this.author = author;
+    //     this.numberOfPages = numberOfPages;
+    //     this.readed = readed;
+    //   }
+    // }
 
-    let book1 = new MyBook('Le titre du livre', 'nom auteur', 200, true);
+    // let book1 = new MyBook('Le titre du livre', 'nom auteur', 200, true);
     
     // Exerice
       // https://replit.com/team/DTBMI-javascript/Formation-JS-Exercice-4-les-classes
@@ -161,10 +161,10 @@
 
     //                0         1        2        3     
     //let guests = ['Franck', 'Marvin', 'John', 'Isabelle']
-    guests[0] // => Franck
-    guests[1] // => Marvin
-    guests[2] // => John
-    guests[3] // => Isabelle
+    // guests[0] // => Franck
+    // guests[1] // => Marvin
+    // guests[2] // => John
+    // guests[3] // => Isabelle
 
 
 
@@ -401,16 +401,16 @@
 
   // - les erreurs de logique
     // Une valeur erronée dans une variable
-      let ageDeLaMajorite = 19
+    //   let ageDeLaMajorite = 19
 
-      if (ageDeLaMajorite <= 18) {
-        "Vous n'êtes pas majeur"
-      }
+    //   if (ageDeLaMajorite <= 18) {
+    //     "Vous n'êtes pas majeur"
+    //   }
 
-    // mélange de condition dans les instructions if
-      if (age <= 25 && age >= 50) {
-        // Fais cela
-      }
+    // // mélange de condition dans les instructions if
+    //   if (age <= 25 && age >= 50) {
+    //     // Fais cela
+    //   }
 
     // ordre dans lequel on ecrit nos ligne de code 
     
@@ -441,9 +441,18 @@
 // Une fonction est un bloc de code auquel on attribu un nom. Quand vous appelez cette fonction, vous exécutez le code qu'elle contient.
 
 // Exemple
-  // Déclaration
+  // Déclaration              paramètres
+  function nomDeLaFonction(donnée1, donnée2, donnée3) {
+    // Notre bloc de code
+    let resultat = donnée1 + donnée2 + donnée3
+    return resultat // valeur de retour
+  }
 
-  // Exécution
+
+  // Exécution                 arguments
+  let result = nomDeLaFonction(1, 2, 3)
+  let result2 = nomDeLaFonction(2, 2, 4)
+
 
 
     // Exercice 
@@ -455,14 +464,110 @@
 
 // Les méthodes d'instances
 
+    class Book {
+      constructor(title, numberOfPages, author, chapters, isReaded) {
+        this.title = title
+        this.numberOfPages = numberOfPages
+        this.author = author
+        this.chapters = chapters
+        this.isReaded = isReaded
+        this.stars = 0
+      }
+
+      static isBought() {
+        console.log('Le livre vient d\'être acheté')
+      }
+
+      static onShelf() {
+        console.log('Le livre vient d\'être mis en rayon')
+      }
+
+      onReading(onReading) {
+        this.isReaded = onReading
+      }
+
+      rateTheBook(numberOfStars) {
+        let sum = 0;
+        for (let stars of numberOfStars) {
+          sum += stars
+        }
+        this.stars = sum / numberOfStars.length
+      }
+
+    }
+
+    // Instance de la classe Book
+    let book1 = new Book('Le titre', 150, 'John Doe', 10, false)
+    // Autre instance de la classe Book
+    let book2 = new Book('Le titre', 150, 'John Doe', 10, false)
+
+    book1.onReading(true)
+
+    console.log(book1.stars)
+
+    book1.rateTheBook([4, 5, 3, 5, 1])
+
+    console.log(book1.stars)
+
+    // Methode statique
+    Book.isBought()
+
+    Book.onShelf()
+
+
+    console.log(Math.floor(Math.random() * 10))
+
     // Exercice
-      // https://replit.com/team/DTBMI-javascript/Formation-JS-Exercice-8-les-fonctions
+      // https://replit.com/team/DTBMI-javascript/Formation-JS-Exercice-9-Methodes-dinstances
 
 
 // ------------ 09 Le Clean Code ------------ //
 // ------------------------------------------ //
 
+// Ne pas répéter son code (DRY)
+
+// const displayUserWelcomeMessage = (user) => {
+//   if (user.online) {
+//     if (user.accountType === "normal") { // a refaire
+//         console.log("Hello " + user.name + "!"); // a refaire
+//     } else {
+//        console.log("Welcome back premium user " + user.name + "!");
+//     }
+//   }
+// }
+
+// displayUserWelcomeMessage(firstUser)
+// displayUserWelcomeMessage(secondUser)
+// displayUserWelcomeMessage(thirdUser)
+
+
+// Bien nommer ses variables et ses fonctions
+
+// Laisser des commentaires
+
+// Mise en forme du code
+  // Mise en retrait
+// let lastName = 'JCVD'
+
+// const firstName = document.getElementById('firstName')
+// const paragraphes = document.getElementsByName('p')
+  
+// firstName.setAttribute('src', )
 
 
 // ------------ 10 L'API DOM ------------ //
 // -------------------------------------- //
+
+
+document.getElementById('firstName')
+        .addEventListener('click', () => {
+          document.body.style.background = "red"
+        })
+
+let div = document.querySelector('.div')
+        
+div.style.border = '1px solid red'
+
+div.addEventListener('mouseover', () => {
+  div.style.border = '3px solid green'
+})
